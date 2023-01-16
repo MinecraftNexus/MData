@@ -4,7 +4,7 @@ import java.io.*;
 import java.lang.reflect.InvocationTargetException;
 import java.nio.file.Paths;
 
-public abstract class BespokeDataContainer<T> extends DataContainer<T> {
+public abstract class BespokeDataContainer<T extends Data> extends DataContainer<T> {
     private MData mData;
 
     public BespokeDataContainer(MData mData) {

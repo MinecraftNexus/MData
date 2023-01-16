@@ -4,7 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 
-public abstract class DataContainer<T> {
+public abstract class DataContainer<T extends Data> {
     private T data;
     protected MData mData;
 
