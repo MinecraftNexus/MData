@@ -1,9 +1,8 @@
 package dev.millzy.mdata;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
+import com.google.j2objc.annotations.ReflectionSupport;
+
+import java.io.*;
 import java.nio.file.Paths;
 
 public abstract class BespokeDataContainer<T extends Data> {
@@ -25,12 +24,34 @@ public abstract class BespokeDataContainer<T extends Data> {
         }
 
         FileInputStream fis = new FileInputStream(file);
-        ObjectInputStream oin = new ObjectInputStream(fis);
+        ObjectInputStream ois = new ObjectInputStream(fis);
 
-        data = (T) oin.readObject();
+        data = (T) ois.readObject();
 
-        oin.close();
+        ois.close();
         fis.close();
+    }
+
+    public void save(MData mData) throws IOException {
+        String filename = getDataId() + ".dat";
+        String directoryPath = Paths.get(mData.getBasePath(), mData.getId()).toString();
+
+        File dir = new File(directoryPath);
+        dir.mkdirs();
+
+        File file = new File(Paths.get(directoryPath, filename).toString());
+
+        if (!file.exists()) {
+            file.createNewFile();
+        }
+
+        FileOutputStream fos = new FileOutputStream(file);
+        ObjectOutputStream oos = new ObjectOutputStream(fos);
+
+        oos.writeObject(data);
+
+        oos.close();
+        fos.close();
     }
 
     public T getData() {

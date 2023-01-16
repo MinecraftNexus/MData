@@ -3,6 +3,7 @@ package dev.millzy.mdata;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
+import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 
 public class MData {
@@ -30,6 +31,14 @@ public class MData {
         try {
             return clazz.getConstructor(MData.class).newInstance(this);
         } catch (InvocationTargetException | IllegalAccessException | InstantiationException | NoSuchMethodException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public <T extends Data, R extends BespokeDataContainer<T>> void saveBespokeData(R container) {
+        try {
+            container.save(this);
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
