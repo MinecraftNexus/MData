@@ -1,11 +1,10 @@
 package dev.millzy.mdata;
 
 import java.lang.reflect.InvocationTargetException;
-import java.nio.file.Path;
 
 public class MData {
     private final String id;
-    protected Path baseDirectory;
+    protected String baseDirectory;
 
     protected MData() {
         this("MData");
