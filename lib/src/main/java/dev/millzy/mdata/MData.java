@@ -25,7 +25,7 @@ public class MData {
     public <T extends DataContainer> T loadInto(Class<T> clazz) {
         try {
             T container = clazz.getConstructor().newInstance();
-            container.load();
+            container.load(this);
             return container;
         } catch (InstantiationException | NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
             throw new RuntimeException(e);
@@ -33,6 +33,6 @@ public class MData {
     }
 
     public void unloadFrom(DataContainer container) {
-        container.unload();
+        container.unload(this);
     }
 }

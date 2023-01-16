@@ -13,7 +13,7 @@ public abstract class DataContainer<T> {
         this.data = data;
     }
 
-    public abstract void load();
-    public abstract void unload();
+    public abstract void load(MData mData);
+    public abstract void unload(MData mData);
     public abstract String getName();
 }
