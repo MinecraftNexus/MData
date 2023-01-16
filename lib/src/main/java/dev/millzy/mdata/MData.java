@@ -1,6 +1,7 @@
 package dev.millzy.mdata;
 
 import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.ParameterizedType;
 
 public class MData {
     private final String id;
@@ -24,7 +25,11 @@ public class MData {
     public <T extends DataContainer> T loadInto(Class<T> clazz) {
         try {
             T container = clazz.getConstructor().newInstance();
-            container.load(this);
+
+            Class<?> dataTypeClass = (Class<?>) ((ParameterizedType) clazz
+                    .getGenericSuperclass()).getActualTypeArguments()[0];
+
+            container.load(dataTypeClass);
             return container;
         } catch (InstantiationException | NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
             throw new RuntimeException(e);
@@ -32,6 +37,6 @@ public class MData {
     }
 
     public void unloadFrom(DataContainer container) {
-        container.unload(this);
+        container.unload();
     }
 }

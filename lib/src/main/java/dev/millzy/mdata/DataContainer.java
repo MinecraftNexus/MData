@@ -2,8 +2,11 @@ package dev.millzy.mdata;
 
 public abstract class DataContainer<T> {
     private T data;
+    protected MData mData;
 
-    public DataContainer() {}
+    public DataContainer(MData mData) {
+        this.mData = mData;
+    }
 
     public T open() {
         return data;
@@ -13,7 +16,7 @@ public abstract class DataContainer<T> {
         this.data = data;
     }
 
-    public abstract void load(MData mData);
-    public abstract void unload(MData mData);
+    public abstract void load(Class<T> clazz);
+    public abstract void unload();
     public abstract String getName();
 }
