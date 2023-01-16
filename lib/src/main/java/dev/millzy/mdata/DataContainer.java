@@ -3,7 +3,7 @@ package dev.millzy.mdata;
 public abstract class DataContainer<T> {
     private T data;
 
-    public abstract void getName();
+    public DataContainer() {}
 
     public T open() {
         return data;
@@ -15,4 +15,5 @@ public abstract class DataContainer<T> {
 
     public abstract void load();
     public abstract void unload();
+    public abstract void getName();
 }
