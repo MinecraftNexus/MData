@@ -15,5 +15,5 @@ public abstract class DataContainer<T> {
 
     public abstract void load();
     public abstract void unload();
-    public abstract void getName();
+    public abstract String getName();
 }
