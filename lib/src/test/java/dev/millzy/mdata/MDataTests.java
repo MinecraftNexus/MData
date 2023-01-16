@@ -73,6 +73,5 @@ public class MDataTests {
 
         /// CLEANUP
         file.deleteOnExit();
-        file.getParent()
     }
 }
