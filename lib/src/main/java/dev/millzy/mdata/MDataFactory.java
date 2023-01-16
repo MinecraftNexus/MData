@@ -1,10 +1,9 @@
 package dev.millzy.mdata;
 
 import java.io.File;
-import java.nio.file.Path;
 
 public class MDataFactory {
-    private MData mData;
+    private final MData mData;
 
     private String baseDirectory = null;
 
