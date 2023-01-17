@@ -14,15 +14,28 @@ public class MDataBuilder {
         this.fileExtension = "dat";
     }
 
+    /**
+     * Builds a new MData instance.
+     * @return Constructed MData instance.
+     * @see MData
+     */
     public MData build() {
         return new MData(id, baseDirectory, fileExtension);
     }
 
+    /**
+     * Sets a base directory where data will be stored in.
+     * @param baseDirectory Absolute path for the base directory
+     */
     public MDataBuilder withBaseDirectory(String baseDirectory) {
         this.baseDirectory = baseDirectory;
         return this;
     }
 
+    /**
+     * Sets a file extension for all created and read files to use.
+     * @param fileExtension File extension without the '.' suffix (E.g. dat, ser)
+     */
     public MDataBuilder withFileExtension(String fileExtension) {
         this.fileExtension = fileExtension;
         return this;
