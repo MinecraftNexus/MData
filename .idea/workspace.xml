@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9698ff34-ece3-461a-8041-7fec892fc926" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/dev/millzy/mdata/DataContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/dev/millzy/mdata/DataContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/dev/millzy/mdata/MData.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/dev/millzy/mdata/MData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/dev/millzy/mdata/MDataBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/dev/millzy/mdata/MDataBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/test/java/dev/millzy/mdata/MDataTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/test/java/dev/millzy/mdata/MDataTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,8 +69,8 @@
       <recent name="dev.millzy.mdata" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.MDataTests">
-    <configuration name="MDataTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.Tests in 'dev.millzy.mdata'">
+    <configuration name="DataContainerTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -79,7 +83,7 @@
           <list>
             <option value=":lib:test" />
             <option value="--tests" />
-            <option value="&quot;dev.millzy.mdata.MDataTests&quot;" />
+            <option value="&quot;dev.millzy.mdata.DataContainerTests&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -89,7 +93,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="MDataTests.bespokeDataLoadTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="DataContainerTests.saveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -102,7 +106,7 @@
           <list>
             <option value=":lib:test" />
             <option value="--tests" />
-            <option value="&quot;dev.millzy.mdata.MDataTests.bespokeDataLoadTest&quot;" />
+            <option value="&quot;dev.millzy.mdata.DataContainerTests.saveTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -112,7 +116,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="MDataTests.bespokeDataSaveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Tests in 'MData.lib.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -124,8 +128,6 @@
         <option name="taskNames">
           <list>
             <option value=":lib:test" />
-            <option value="--tests" />
-            <option value="&quot;dev.millzy.mdata.MDataTests.bespokeDataSaveTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -135,7 +137,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="MDataTests.builderTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Tests in 'dev.millzy.mdata'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -148,7 +150,30 @@
           <list>
             <option value=":lib:test" />
             <option value="--tests" />
-            <option value="&quot;dev.millzy.mdata.MDataTests.builderTest&quot;" />
+            <option value="&quot;dev.millzy.mdata.*&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests in 'dev.millzy.mdata.data'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":lib:test" />
+            <option value="--tests" />
+            <option value="&quot;dev.millzy.mdata.data.*&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -160,10 +185,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.MDataTests" />
-        <item itemvalue="Gradle.MDataTests.bespokeDataSaveTest" />
-        <item itemvalue="Gradle.MDataTests.bespokeDataLoadTest" />
-        <item itemvalue="Gradle.MDataTests.builderTest" />
+        <item itemvalue="Gradle.Tests in 'dev.millzy.mdata'" />
+        <item itemvalue="Gradle.Tests in 'dev.millzy.mdata.data'" />
+        <item itemvalue="Gradle.Tests in 'MData.lib.test'" />
+        <item itemvalue="Gradle.DataContainerTests.saveTest" />
+        <item itemvalue="Gradle.DataContainerTests" />
       </list>
     </recent_temporary>
   </component>
