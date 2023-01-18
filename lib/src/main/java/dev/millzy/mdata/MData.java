@@ -7,6 +7,10 @@ import java.io.Serializable;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
+/**
+ * Management and configuration class for {@link DataContainer}s.
+ * @since 0.1.0
+ */
 public class MData {
     private final String id;
     private final String baseDirectory;
@@ -23,6 +27,7 @@ public class MData {
      * @param id ID to use for data storage (Influences directory storage name. E.g. ~/m_data_id/)
      * @return MDataBuilder instance created.
      * @see MDataBuilder
+     * @since 0.1.0
      */
     public static MDataBuilder create(String id) {
         return new MDataBuilder(id);
@@ -40,6 +45,7 @@ public class MData {
      * @throws IllegalAccessException If the container's Constructor object is enforcing Java language access control and the underlying constructor is inaccessible.
      * @see DataContainer
      * @see Serializable
+     * @since 0.1.0
      */
     public <T extends Serializable, R extends DataContainer<T>> R loadDataInto(@NotNull Class<R> clazz)
             throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
@@ -55,6 +61,7 @@ public class MData {
      * @param <R> DataContainer type.
      * @see DataContainer
      * @see Serializable
+     * @since 0.1.0
      */
     public <T extends Serializable, R extends DataContainer<T>> R tryLoadDataInto(@NotNull Class<R> clazz) {
         try {
@@ -71,6 +78,7 @@ public class MData {
      * @param <R> DataContainer type.
      * @see DataContainer
      * @see Serializable
+     * @since 0.1.0
      */
     public <T extends Serializable, R extends DataContainer<T>> void saveDataFrom(R dataContainer) throws IOException {
         dataContainer.save();
@@ -84,6 +92,7 @@ public class MData {
      * @param <R> DataContainer type
      * @see DataContainer
      * @see Serializable
+     * @since 0.1.0
      */
     public <T extends Serializable, R extends DataContainer<T>> boolean trySaveDataFrom(R dataContainer) {
         try {
@@ -96,6 +105,7 @@ public class MData {
 
     /**
      * @return The ID of the MData instance.
+     * @since 0.1.0
      */
     public String getId() {
         return id;
@@ -103,6 +113,7 @@ public class MData {
 
     /**
      * @return The base directory of the MData instance.
+     * @since 0.1.0
      */
     public String getBaseDirectory() {
         return baseDirectory;
@@ -110,6 +121,7 @@ public class MData {
 
     /**
      * @return The desired file extension of the MData instance.
+     * @since 0.1.0
      */
     public String getFileExtension() {
         return fileExtension;

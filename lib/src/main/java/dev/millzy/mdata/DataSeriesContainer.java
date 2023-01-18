@@ -6,7 +6,13 @@ import java.util.*;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
+/**
+ * Container for storing an array of objects. Includes some wrapping methods.
+ * @param <E> Object type that is stored in this container.
+ * @since 0.1.0
+ */
 public abstract class DataSeriesContainer<E extends Serializable> extends DataContainer<ArrayList<E>> {
+
     public DataSeriesContainer(MData mData, ArrayList<E> data) {
         super(mData, data);
     }
