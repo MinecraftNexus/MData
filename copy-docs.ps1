@@ -1,0 +1,1 @@
+Copy-Item -Path "$PSScriptRoot/lib/build/docs/javadoc/*" -Destination "$PSScriptRoot/docs" -Recurse -Force
