@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"dev.millzy.mdata","l":"DataContainer"},{"p":"dev.millzy.mdata","l":"DataSeriesContainer"},{"p":"dev.millzy.mdata","l":"MData"},{"p":"dev.millzy.mdata","l":"MDataBuilder"}];updateSearchResults();
